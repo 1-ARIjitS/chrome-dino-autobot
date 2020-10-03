@@ -8,12 +8,16 @@ def hit(key):
     return
 
 def isCollide(data):
-
+    # Draw the rectangle for birds
+    for i in range(300, 415):
+        for j in range(410, 580):
+            if data[i, j] < 100:
+                hit("down")
+                return
     for i in range(300, 540):
         for j in range(500, 650):
             if data[i, j] < 100:
-                hit("up")
-            
+                hit("up")      
     return
 
 if __name__ == "__main__":
